@@ -26,10 +26,10 @@ public class Libro extends BaseEntidad{
 
     @Column(name = "Paginas")
     private int paginas;
-
+    //Autor Principal
     @Column(name = "Autor")
     private String autor;
-
+    //Autores Secundarios
     @ManyToMany(cascade = CascadeType.REFRESH)
     private List<Autor> autores;
 }
